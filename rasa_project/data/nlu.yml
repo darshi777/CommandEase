@@ -1,0 +1,58 @@
+   version: "3.0"
+   nlu:
+   - intent: ask_command
+     examples: |
+       - How do I [concatenate](command) files?
+       - What is the command to [word_count](command) a file?
+       - How can I [list_everything](command) in a directory?
+       - How do I [print directory](command)?
+       - How do I [make_directory](command)?
+       - How do I [change directory](command)?
+       - How do I [clear](command) the screen?
+       - How do I [move_file](command)?
+       - How do I [create_file](command)?
+       - How do I [copy](command) a file?
+       - How do I [match_pattern](command)?
+       - How do I [change_mode](command)?
+       - How do I [remove](command) a file?
+       - How do I [print_head](command)?
+       - How do I [print_tail](command)?
+       - How do I [difference](command)?
+       - How do I [reverse](command)?
+       - How do I [uppercase](command)?
+       - How do I [lowercase](command)?
+       - How do I [findreplace](command)?
+       - How do I [encrypt](command)?
+       - How do I [decrypt](command)?
+       - How do I [compress](command)?
+       - How do I [decompress](command)?
+       - How do I [filehistory](command)?
+       - How do I [filesplit](command)?
+       - How do I [filejoin](command)?
+       - Tell me how to [concatenate](command) files.
+       - What is the syntax for [word_count](command)?
+       - Explain how to [list_everything](command).
+       - I need to [print directory](command).
+       - Show me how to [make_directory](command).
+       - Can you tell me how to [change directory](command)?
+       - What is the command for [clear](command)?
+       - How can I [move_file](command)?
+       - I want to [create_file](command).
+       - How do I [copy](command) a file?
+       - What is the command to [match_pattern](command)?
+       - How do I [change_mode](command)?
+       - How do I [remove](command) a file?
+       - How do I [print_head](command)?
+       - How do I [print_tail](command)?
+       - How do I [difference](command)?
+       - How do I [reverse](command)?
+       - How do I [uppercase](command)?
+       - How do I [lowercase](command)?
+       - How do I [findreplace](command)?
+       - How do I [encrypt](command)?
+       - How do I [decrypt](command)?
+       - How do I [compress](command)?
+       - How do I [decompress](command)?
+       - How do I [filehistory](command)?
+       - How do I [filesplit](command)?
+       - How do I [filejoin](command)?

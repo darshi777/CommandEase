@@ -1,0 +1,239 @@
+#include <filesystem>
+#include <fstream>
+#include <sys/stat.h>
+#include <map>
+#include <ctime>
+#include <cstring>
+#include <sys/wait.h>
+#include <dirent.h>
+
+#include "tokens.hpp"
+
+class Cat{
+    string myText;
+    string input;
+    string output;
+    public:
+        int cat_command(string x);
+        int cat_command(string x,string y);
+        int execute(Tokens &);
+        string getOutput();
+};
+
+class MakeDirectory{
+    string output;
+    public:
+        int execute(Tokens& obj);
+        int createDir(string);
+        string getOutput();
+};
+
+class ChangeDir{
+    public:
+        int execute(string dir_path);
+        string getOutput();
+};
+
+class Clear{
+    public:
+        Clear() {
+        }
+        void execute( Tokens& obj);
+};
+
+class WordCount{
+    string output;
+    string input;
+    bool w_flag = false;
+    bool c_flag = false;
+    bool l_flag = false;
+
+    public:
+        int process_args(Tokens& obj);
+        int execute( Tokens& obj);
+        string getOutput() {
+            return output;
+        }
+};
+
+class Touch{
+    string output;
+    public:
+        int execute( Tokens& obj);
+        string& getOutput() {
+            return output;
+        }
+};
+
+class ListDir{
+    string output;
+    public:
+        int execute( Tokens&);
+        void mode_str(mode_t , string &);
+        string& getOutput() {
+            return output;
+        }
+        string getTimeString(struct tm &);
+};
+
+class PrintDir{
+    string output;
+    public:
+        int execute( Tokens& obj);
+        string& getOutput() {
+            return output;
+        }
+};
+
+class Move {
+    public:
+        int execute(Tokens& obj);
+        int renameFile(const string& source, const string& destination) {
+            return rename(source.c_str(), destination.c_str());
+        }
+        string getFileName(const string& path);
+};
+
+class Fork {
+    public:
+        int execute(Tokens& obj);
+};
+
+class Copy {
+public:
+    int execute(Tokens& tokens);
+};
+
+class Grep {
+public:
+    int execute(Tokens& tokens);
+};
+
+class Chmod {
+public:
+    int execute(Tokens& tokens);
+};
+
+class Remove {
+public:
+    int execute(Tokens& tokens);
+    std::string getOutput() const;
+private:
+    std::string output; // Declare the output member variable
+};
+
+class Head {
+public:
+    int execute(Tokens& tokens);
+    std::string getOutput() const;
+private:
+    std::string output;
+};
+
+
+class Tail {
+public:
+    int execute(Tokens& tokens);
+    std::string getOutput() const;
+private:
+    std::string output;
+};
+
+class Diff {
+public:
+    int execute(Tokens& tokens);
+    std::string getOutput() const;
+private:
+    std::string output;
+};
+
+class Reverse {
+public:
+    int execute(Tokens& obj);
+private:
+    void reverseFileContent(const string& filePath);
+};
+
+class Uppercase {
+public:
+    int execute(Tokens& obj);
+private:
+    void uppercaseFileContent(const string& filePath);
+};
+
+class Lowercase {
+public:
+    int execute(Tokens& obj);
+private:
+    void lowercaseFileContent(const string& filePath);
+};
+
+class FindReplace {
+public:
+    int execute(Tokens& obj);
+private:
+    void findAndReplaceInFile(const string& filePath, const string& findStr, const string& replaceStr);
+};
+
+class Encrypt {
+public:
+    int execute(Tokens& obj);
+private:
+    void encryptFileContent(const string& filePath, int shift);
+    string caesarCipher(const string& text, int shift);
+};
+class Decrypt {
+public:
+    int execute(Tokens& obj);
+private:
+    void decryptFileContent(const string& filePath, int shift);
+    string caesarCipher(const string& text, int shift);
+};
+
+class Compress {
+public:
+    int execute(Tokens& obj);
+private:
+    void compressFileContent(const string& filePath);
+    string runLengthEncode(const string& text);
+};
+
+class Decompress {
+public:
+    int execute(Tokens& obj);
+private:
+    void decompressFileContent(const string& filePath);
+    string runLengthDecode(const string& text);
+};
+
+class FileHistory {
+public:
+    FileHistory() {
+        loadHistory();
+    }
+    ~FileHistory() {
+        saveHistory();
+    }
+    int execute(Tokens& obj);
+private:
+    void trackChange(const string& filePath);
+    void displayHistory(const string& filePath);
+    void saveHistory();
+    void loadHistory();
+    map<string, vector<string>> history;
+};
+
+class FileSplit {
+public:
+    int execute(Tokens& obj);
+private:
+    void splitBySize(const string& filePath, size_t size);
+    void splitByLines(const string& filePath, size_t lines);
+};
+
+class FileJoin {
+public:
+    int execute(Tokens& obj);
+private:
+    void joinFiles(const vector<string>& filePaths, const string& outputFile);
+};

@@ -1,0 +1,72 @@
+version: "3.0"
+
+intents:
+- ask_command
+- goodbye
+- bot_challenge
+
+entities:
+- command
+
+actions:
+- action_provide_command
+
+responses:
+  utter_concatenate:
+    - text: "The syntax for 'concatenate' is: concatenate <file1> [file2]"
+  utter_word_count:
+    - text: "The syntax for 'word_count' is: word_count <file>"
+  utter_list_everything:
+    - text: "The syntax for 'list_everything' is: list_everything [directory]"
+  utter_print_directory:
+    - text: "The syntax for 'print directory' is: print directory"
+  utter_make_directory:
+    - text: "The syntax for 'make_directory' is: make_directory <directory>"
+  utter_change_directory:
+    - text: "The syntax for 'change directory' is: change directory <directory>"
+  utter_clear:
+    - text: "The syntax for 'clear' is: clear"
+  utter_move_file:
+    - text: "The syntax for 'move_file' is: move_file <source> <destination>"
+  utter_create_file:
+    - text: "The syntax for 'create_file' is: create_file <file>"
+  utter_copy:
+    - text: "The syntax for 'copy' is: copy <source> <destination>"
+  utter_match_pattern:
+    - text: "The syntax for 'match_pattern' is: match_pattern <pattern> <file>"
+  utter_change_mode:
+    - text: "The syntax for 'change_mode' is: change_mode <permissions> <file>"
+  utter_remove:
+    - text: "The syntax for 'remove' is: remove <file>"
+  utter_print_head:
+    - text: "The syntax for 'print_head' is: print_head <file>"
+  utter_print_tail:
+    - text: "The syntax for 'print_tail' is: print_tail <file>"
+  utter_difference:
+    - text: "The syntax for 'difference' is: difference <file1> <file2>"
+  utter_reverse:
+    - text: "The syntax for 'reverse' is: reverse <file>"
+  utter_uppercase:
+    - text: "The syntax for 'uppercase' is: uppercase <file>"
+  utter_lowercase:
+    - text: "The syntax for 'lowercase' is: lowercase <file>"
+  utter_findreplace:
+    - text: "The syntax for 'findreplace' is: findreplace <file> <search> <replace>"
+  utter_encrypt:
+    - text: "The syntax for 'encrypt' is: encrypt <file> <shift>"
+  utter_decrypt:
+    - text: "The syntax for 'decrypt' is: decrypt <file> <shift>"
+  utter_compress:
+    - text: "The syntax for 'compress' is: compress <file>"
+  utter_decompress:
+    - text: "The syntax for 'decompress' is: decompress <file>"
+  utter_filehistory:
+    - text: "The syntax for 'filehistory' is: filehistory <file>"
+  utter_filesplit:
+    - text: "The syntax for 'filesplit' is: filesplit <file> <size/lines>"
+  utter_filejoin:
+    - text: "The syntax for 'filejoin' is: filejoin <file1> <file2> ... <output_file>"
+  utter_goodbye:
+    - text: "Goodbye!"
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."

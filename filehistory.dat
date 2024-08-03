@@ -1,0 +1,52 @@
+hi.txt
+1
+349
+Timestamp: Tue Jul 16 15:16:16 2024
+Content:
+CXX := g++
+CXXFLAGS := -std=c++17
+
+SRCS := tokens.cpp commands.cpp simpleshell.cpp main.cpp
+OBJS := $(SRCS:.cpp=.o)
+
+TARGET := gpp
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS) $(TARGET)
+new.txt
+1
+60
+Timestamp: Mon Jul 15 17:26:56 2024
+Content:
+this is test 1.reverse.txt
+2
+62
+Timestamp: Mon Jul 15 17:25:37 2024
+Content:
+this in reverse.
+69
+Timestamp: Mon Jul 15 17:26:29 2024
+Content:
+this in reverse.
+change.test1.txt
+2
+87
+Timestamp: Tue Jul 16 17:14:42 2024
+Content:
+this is test .
+this is the second lineeee.94
+Timestamp: Tue Jul 16 17:15:12 2024
+Content:
+this is test .
+this is the second lineeee.
+track.

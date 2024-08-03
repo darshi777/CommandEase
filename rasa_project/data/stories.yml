@@ -1,0 +1,192 @@
+version: "3.0"
+
+stories:
+
+- story: user asks for concatenate command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: concatenate
+  - action: utter_concatenate
+
+- story: user asks for word_count command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: word_count
+  - action: utter_word_count
+
+- story: user asks for list_everything command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: list_everything
+  - action: utter_list_everything
+
+- story: user asks for print directory command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: print directory
+  - action: utter_print_directory
+
+- story: user asks for make_directory command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: make_directory
+  - action: utter_make_directory
+
+- story: user asks for change directory command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: change directory
+  - action: utter_change_directory
+
+- story: user asks for clear command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: clear
+  - action: utter_clear
+
+- story: user asks for move_file command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: move_file
+  - action: utter_move_file
+
+- story: user asks for create_file command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: create_file
+  - action: utter_create_file
+
+- story: user asks for copy command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: copy
+  - action: utter_copy
+
+- story: user asks for match_pattern command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: match_pattern
+  - action: utter_match_pattern
+
+- story: user asks for change_mode command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: change_mode
+  - action: utter_change_mode
+
+- story: user asks for remove command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: remove
+  - action: utter_remove
+
+- story: user asks for print_head command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: print_head
+  - action: utter_print_head
+
+- story: user asks for print_tail command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: print_tail
+  - action: utter_print_tail
+
+- story: user asks for difference command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: difference
+  - action: utter_difference
+
+- story: user asks for reverse command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: reverse
+  - action: utter_reverse
+
+- story: user asks for uppercase command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: uppercase
+  - action: utter_uppercase
+
+- story: user asks for lowercase command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: lowercase
+  - action: utter_lowercase
+
+- story: user asks for findreplace command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: findreplace
+  - action: utter_findreplace
+
+- story: user asks for encrypt command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: encrypt
+  - action: utter_encrypt
+
+- story: user asks for decrypt command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: decrypt
+  - action: utter_decrypt
+
+- story: user asks for compress command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: compress
+  - action: utter_compress
+
+- story: user asks for decompress command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: decompress
+  - action: utter_decompress
+
+- story: user asks for filehistory command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: filehistory
+  - action: utter_filehistory
+
+- story: user asks for filesplit command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: filesplit
+  - action: utter_filesplit
+
+- story: user asks for filejoin command
+  steps:
+  - intent: ask_command
+    entities:
+    - command: filejoin
+  - action: utter_filejoin

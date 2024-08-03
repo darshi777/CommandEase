@@ -1,0 +1,4 @@
+   rasabot/lib/python3.8/site-packages/numpy/.dylibs/libopenblas.0.dylib
+   rasabot/lib/python3.8/site-packages/scipy/.dylibs/libopenblas.0.dylib
+   rasabot/lib/python3.8/site-packages/tensorflow/python/_pywrap_tfcompile.so
+   rasabot/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
